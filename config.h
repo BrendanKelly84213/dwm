@@ -77,9 +77,17 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_salmon1, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
+/* pulseaudio settings*/  
+/*
 static const char *upvol[]   = { "pactl", "set-sink-volume", "0", "+5%",     NULL };
 static const char *downvol[] = { "pactl", "set-sink-volume", "0", "-5%",     NULL };
 static const char *mutevol[] = { "pactl", "set-sink-mute",   "0", "toggle",  NULL };
+*/
+
+/* amixer settings */
+static const char *upvol[]   = { "amixer", "-c", "0","set", "5%+",     NULL };
+static const char *downvol[] = { "amixer", "-c", "0","set", "5%-",     NULL };
+static const char *mutevol[] = { "amixer", "-c", "0","set", "toggle",  NULL };
 
 static const char *brupcmd[] = { "light", "-A", "10", NULL };
 static const char *brdowncmd[] = { "light", "-U", "10", NULL };
