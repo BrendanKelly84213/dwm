@@ -85,9 +85,9 @@ static const char *mutevol[] = { "pactl", "set-sink-mute",   "0", "toggle",  NUL
 */
 
 /* amixer settings */
-static const char *upvol[]   = { "amixer", "-c", "0","set", "5%+",     NULL };
-static const char *downvol[] = { "amixer", "-c", "0","set", "5%-",     NULL };
-static const char *mutevol[] = { "amixer", "-c", "0","set", "toggle",  NULL };
+static const char *upvol[]   = { "amixer", "-c", "0","set", "Master", "5%+",     NULL };
+static const char *downvol[] = { "amixer", "-c", "0","set", "Master", "5%-",     NULL };
+static const char *mutevol[] = { "amixer", "-c", "0","set", "Master", "toggle",  NULL };
 
 static const char *brupcmd[] = { "light", "-A", "10", NULL };
 static const char *brdowncmd[] = { "light", "-U", "10", NULL };
