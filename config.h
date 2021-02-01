@@ -4,7 +4,7 @@
 
 /* appearance */
 static const unsigned int gappx     = 7;        /* gaps between windows */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -96,6 +96,9 @@ static const char *brdowncmd[] = { "light", "-U", "10", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY,                       XK_Left,  shiftview,        {.i = -1 } },
+	{ MODKEY,                       XK_Right,  shiftview,        {.i = +1 } },
+
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
