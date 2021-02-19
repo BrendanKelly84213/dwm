@@ -41,9 +41,9 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-/* static const char *tags[] = { "Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ" }; */
+static const char *tags[] = { "Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ" };
 
-static const char *tags[] = { "一", "二", "三", "四", "五" };
+/* static const char *tags[] = { "一", "二", "三", "四", "五" }; */
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -84,16 +84,14 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 
 /* pulseaudio settings*/  
-/*
 static const char *upvol[]   = { "pactl", "set-sink-volume", "0", "+5%",     NULL };
 static const char *downvol[] = { "pactl", "set-sink-volume", "0", "-5%",     NULL };
 static const char *mutevol[] = { "pactl", "set-sink-mute",   "0", "toggle",  NULL };
-*/
 
 /* amixer settings */
-static const char *upvol[]   = { "amixer", "-c", "0","set", "Master", "5%+",     NULL };
-static const char *downvol[] = { "amixer", "-c", "0","set", "Master", "5%-",     NULL };
-static const char *mutevol[] = { "amixer", "-c", "0","set", "Master", "toggle",  NULL };
+/* static const char *upvol[]   = { "amixer", "-c", "0","set", "Master", "5%+",     NULL }; */
+/* static const char *downvol[] = { "amixer", "-c", "0","set", "Master", "5%-",     NULL }; */
+/* static const char *mutevol[] = { "amixer", "-c", "0","set", "Master", "toggle",  NULL }; */
 
 static const char *brupcmd[] = { "light", "-A", "10", NULL };
 static const char *brdowncmd[] = { "light", "-U", "10", NULL };
